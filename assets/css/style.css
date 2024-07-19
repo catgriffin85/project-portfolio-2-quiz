@@ -8,17 +8,6 @@ body {
 }
 
 
-#user {
-    padding: 2%;
-}
-#username {
-    width: 15%;
-    box-sizing: border-box;
-    border: none;
-    border-bottom: 1px solid #0C1231;
-    background-color: #c5e7d2;
-}
-
 #startQuiz {
     background-color: #0C1231;
     color:#e6ffe6;
@@ -28,10 +17,6 @@ body {
     padding: 1rem;
 }
 
-img {
-    width: 10%;
-    height: auto;
-    bottom: 1rem;
-    right: 1rem;
-    float: right;
+.hidden {
+    display: none;
 }

@@ -34,25 +34,23 @@
             <p><strong>Read Carefully:</strong> Each question will present you with multiple choice answers. Read them thoroughly before making your choice.</p>
             <p><strong>Have Fun:</strong> This quiz is all about learning and having a blast, so enjoy the process and don’t stress about the scores.</p>
             <br>
-            <p>Enter your name then click <strong>Start Quiz</strong> to begin. Good luck"</p>
+            <p>Click <strong>Start Quiz</strong> to begin. Good luck"</p>
     
-        <div id="user">
-        <p><strong>Your Name: </strong>
-            <input type="text" id="username" required>
-        </p>
-        <br>
-        <button id="startQuiz" onclick="questions">Start Quiz!</button>
+        <button id="startQuiz">Start Quiz!</button>
         </div>
     </div>
-    <!-- Questions -->
-    <div id="questions" class="hidden"></div>
+    <!-- Questions section -->
+    <div id="quizSection" class="hidden">
+    <div id="questions"></div>
         <button id="answer1" onclick="checkAnswer(0)"></button>
         <button id="answer2" onclick="checkAnswer(1)"></button>
         <button id="answer3" onclick="checkAnswer(2)"></button>
         <button id="answer4" onclick="checkAnswer(3)"></button>
+    
     <br>
-    <!-- Scrore Tracking -->
+    <!-- Scrore Tracking section -->
     <div>Score: <span id="score">0 / 10</span></div>
+    </div>
     </main>
     
     <script src="assets/js/script.js"></script>
