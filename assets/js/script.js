@@ -1,4 +1,4 @@
-//* questions and answers variables
+//* questions, answers and score variables
 
 const question = document.getElementById('question');
 const answer1 = document.getElementById('answer1');
@@ -6,6 +6,9 @@ const answer2 = document.getElementById('answer2');
 const answer3 = document.getElementById('answer3');
 const answer4 = document.getElementById('answer4');
 const score = document.getElementById('score');
+
+let questionNum = 0;
+let scoreNum = 0;
 
 //* Display introduction section only first then click Start Quiz and introduction section is hidden and question section displays
 
@@ -22,12 +25,12 @@ document.getElementById('startQuiz').addEventListener('click', function() {
 
 const questions = [
     {
-        'question': 'Which year was 3.	St. Patricks day was first celebrated ?',
+        'question': 'Which year was St. Patricks day was first celebrated?',
         'answers': [1631, 1641, 1651, 1661],
         'correct': 0
     },
     {
-        'question': 'Which year was Guiness established ?',
+        'question': 'Which year was Guiness established?',
         'answers': [1559, 1659, 1759, 1859],
         'correct': 2
     },
@@ -72,3 +75,56 @@ const questions = [
         'correct': 3
     },
 ]
+
+const quizLength = questions.length;
+
+//* Load questions and answers
+
+function loadQuestion(questionNum) {
+    question.innerText = questions[questionNum].question;
+}
+
+function loadAnswers(questionNum) {
+    answer1.innerText = questions[questionNum].answers[0];
+    answer2.innerText = questions[questionNum].answers[1];
+    answer3.innerText = questions[questionNum].answers[2];
+    answer4.innerText = questions[questionNum].answers[3];
+}
+
+function checkAnswer(answerNum) {
+    console.log('answer number chosen:', answerNum);
+
+    let correctAns = questions[questionNum].correct
+    if (answerNum === correctAns) {
+        scoreNum++;
+        score.innerText = scoreNum;
+    }
+
+    questionNum++;
+    if (questionNum === quizLength) {
+        endgame();
+    } else {
+        loadQuestion(questionNum);
+        loadAnswers(questionNum);
+    }
+}
+
+function endgame() {
+    playAgain.style.visibility = "visible";
+}
+
+function endgameOption (chosen) {
+    if (chosen === 0 ) {
+        window.location.reload()
+    } else {
+        quiz.innerHTML = "<h1>Thanks for playing!</h1>"
+    }
+}
+
+function startQuiz() {
+    playAgain.style.visibility = "hidden";
+    loadQuestion(questionNum);
+    loadAnswers(questionNum)
+}
+
+startQuiz();
