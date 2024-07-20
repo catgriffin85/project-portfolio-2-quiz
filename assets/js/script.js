@@ -19,7 +19,7 @@ document.getElementById('startQuiz').addEventListener('click', function() {
     introSection.classList.add('hidden');
     questionSection.classList.remove('hidden');
 
-})
+});
 
 //* List of questions
 
@@ -74,7 +74,7 @@ const questions = [
         'answers': [2006, 2007, 2008, 2009],
         'correct': 3
     },
-]
+];
 
 const quizLength = questions.length;
 
@@ -82,31 +82,45 @@ const quizLength = questions.length;
 
 function loadQuestion(questionNum) {
     question.innerText = questions[questionNum].question;
-}
+    
+    }
 
 function loadAnswers(questionNum) {
     answer1.innerText = questions[questionNum].answers[0];
     answer2.innerText = questions[questionNum].answers[1];
     answer3.innerText = questions[questionNum].answers[2];
     answer4.innerText = questions[questionNum].answers[3];
+
 }
+
+
 
 function checkAnswer(answerNum) {
     console.log('answer number chosen:', answerNum);
+    const buttons = document.querySelectorAll('#answers button');
 
     let correctAns = questions[questionNum].correct
+
     if (answerNum === correctAns) {
+        buttons[answerNum].style.backgroundColor = 'green'
         scoreNum++;
         score.innerText = scoreNum;
+    } else {
+        buttons[answerNum].style.backgroundColor = 'red';
+        buttons[correctAns].style.backgroundColor = 'green';
     }
 
     questionNum++;
     if (questionNum === quizLength) {
         endgame();
     } else {
+        setTimeout(() => {
         loadQuestion(questionNum);
         loadAnswers(questionNum);
-    }
+        buttons[answerNum].style.backgroundColor = '';
+        buttons[correctAns].style.backgroundColor = '';
+    }, 1000);
+}
 }
 
 function endgame() {

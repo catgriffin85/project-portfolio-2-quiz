@@ -10,7 +10,7 @@ body {
 
 #startQuiz {
     background-color: #0C1231;
-    color:#e6ffe6;
+    color: #e6ffe6;
     font-size: 130%;
     text-align: center;
     border: none;
@@ -20,3 +20,4 @@ body {
 .hidden {
     display: none;
 }
+
