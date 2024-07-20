@@ -21,3 +21,7 @@ body {
     display: none;
 }
 
+img {
+    width: auto;
+    height: 25rem;
+}
