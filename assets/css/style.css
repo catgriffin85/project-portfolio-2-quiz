@@ -9,8 +9,8 @@ body {
 
 
 #startQuiz {
-    background-color: #0C1231;
-    color: #e6ffe6;
+    background-color: green;
+    color: gold;
     font-size: 130%;
     text-align: center;
     border: none;
@@ -23,5 +23,20 @@ body {
 
 img {
     width: auto;
-    height: 25rem;
+    height: 15rem;
+}
+
+#quizSection {
+    margin: 1rem;
+    padding-top: 20%;
+    font-size: 150%;
+    font-weight: 500;
+}
+
+#quizSection button {
+    padding: 3rem;
+    font-size: larger;
+    background-color: #c5e7d2;
+    border: 2px solid;
+    border-radius: 25px;   
 }
