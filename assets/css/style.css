@@ -47,7 +47,7 @@ img {
     border-radius: 25px;   
 }
 
-/* Media queries on screens less than 600px */
+/* Media queries on screens less than 700px */
 @media screen and (max-width: 700px) {
 
 /*Question styling*/
@@ -62,11 +62,15 @@ img {
 
 /*Answer button styling*/
 #quizSection button {
+    margin: 0.5rem;
     padding: 1rem 2rem;
     font-size: 130%;
     background-color: #c5e7d2;
     border: 2px solid;
-    border-radius: 15px;   
-    
+    border-radius: 15px;  
+    display: flexbox; 
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 }
