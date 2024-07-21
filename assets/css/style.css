@@ -1,13 +1,18 @@
+/*Google Font import*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*Default styling*/
 body {
     background-color: #c5e7d2;
     color: #0C1231;
+    font-family: "Raleway", sans-serif;
     font-size: 120%;
     text-align: center;
     margin: 0;
     padding: 0;
 }
 
-
+/*Introduction styling*/
 #startQuiz {
     background-color: green;
     color: gold;
@@ -25,7 +30,7 @@ img {
     width: auto;
     height: 15rem;
 }
-
+ /*Question styling*/
 #quizSection {
     margin: 1rem;
     padding-top: 20%;
@@ -33,10 +38,35 @@ img {
     font-weight: 500;
 }
 
+/*Answer button styling*/
 #quizSection button {
-    padding: 3rem;
+    padding: 2rem;
     font-size: larger;
     background-color: #c5e7d2;
     border: 2px solid;
     border-radius: 25px;   
+}
+
+/* Media queries on screens less than 600px */
+@media screen and (max-width: 700px) {
+
+/*Question styling*/
+#quizSection {
+    margin: 0.5rem;
+    padding-top: 10%;
+    font-size: 120%;
+    font-weight: 400;
+    
+    
+}
+
+/*Answer button styling*/
+#quizSection button {
+    padding: 1rem 2rem;
+    font-size: 130%;
+    background-color: #c5e7d2;
+    border: 2px solid;
+    border-radius: 15px;   
+    
+}
 }

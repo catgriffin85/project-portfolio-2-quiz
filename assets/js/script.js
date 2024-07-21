@@ -1,4 +1,4 @@
-//* questions, answers and score variables
+//* Questions, answers and score variables
 
 const question = document.getElementById('question');
 const answer1 = document.getElementById('answer1');
@@ -121,6 +121,7 @@ function checkAnswer(answerNum) {
         fact.innerText = questions[questionNum].fact;
     }
   
+//* Check if next question needs to be reloaded or the game should end
     questionNum++;
     if (questionNum === quizLength) {
         endgame();
@@ -135,8 +136,12 @@ function checkAnswer(answerNum) {
 }
 }
 
+//* End quiz
 function endgame() {
     playAgain.style.visibility = "visible";
+    question.innerText = '';
+    answers.innerText = '';
+    fact.innerText = '';
 }
 
 function endgameOption (chosen) {
@@ -147,6 +152,7 @@ function endgameOption (chosen) {
     }
 }
 
+//* Start quiz again
 function startQuiz() {
     playAgain.style.visibility = "hidden";
     loadQuestion(questionNum);
