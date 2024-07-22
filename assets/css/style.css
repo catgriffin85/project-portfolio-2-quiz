@@ -8,7 +8,7 @@ body {
     font-family: "Raleway", sans-serif;
     font-size: 120%;
     text-align: center;
-    margin: 0.5;
+    margin: 0.5rem;
     padding: 0;
 }
 
@@ -30,7 +30,8 @@ img {
     width: auto;
     height: 15rem;
 }
- /*Question styling*/
+
+/*Question styling*/
 #quizSection img {
     width: 10rem;
     height: auto;
@@ -47,9 +48,9 @@ img {
 #quizSection button {
     padding: 2rem;
     font-size: larger;
-    background-color: #c5e7d2;
+    background-color: #E0FEED;
     border: 2px solid;
-    border-radius: 25px;   
+    border-radius: 25px;
 }
 
 /*Score count section */
@@ -79,39 +80,39 @@ img {
 /* Media queries on screens less than 700px */
 @media screen and (max-width: 700px) {
 
-/*Question styling*/
-#quizSection {
-    margin: 0.5rem;
-    padding-top: 10%;
-    font-size: 120%;
-    font-weight: 400;
-   
-}
+    /*Question styling*/
+    #quizSection {
+        margin: 0.5rem;
+        padding-top: 10%;
+        font-size: 120%;
+        font-weight: 400;
 
-/*Answer button styling*/
-#quizSection button {
-    margin: 0.5rem;
-    padding: 1rem 2rem;
-    font-size: 130%;
-    background-color: #c5e7d2;
-    border: 2px solid;
-    border-radius: 15px;  
-    display: flexbox; 
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
+    }
 
-/*Play again button styling*/
-#playAgain button {
-    margin: 0.5rem;
-    background-color: white;
-    color: green;
-    padding: 0.75rem;
-    font-size: 100%;
-    border: 1px solid green;
-    border-radius: 25px;
-   
-}
+    /*Answer button styling*/
+    #quizSection button {
+        margin: 0.3rem;
+        padding: 1rem 2rem;
+        font-size: 130%;
+        background-color: #E0FEED;
+        border: 2px solid;
+        border-radius: 15px;
+        display: flexbox;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    /*Play again button styling*/
+    #playAgain button {
+        margin: 0.5rem;
+        background-color: white;
+        color: green;
+        padding: 0.75rem;
+        font-size: 100%;
+        border: 1px solid green;
+        border-radius: 25px;
+
+    }
 
 }

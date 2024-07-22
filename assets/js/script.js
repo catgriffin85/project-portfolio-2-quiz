@@ -28,7 +28,7 @@ const questions = [
         'question': 'Q1. Which year was St. Patricks day was first celebrated?',
         'answers': [1631, 1641, 1651, 1661],
         'correct': 0,
-        'fact': 'St. Patrick wasn\'t actually Irish and green was not the colour he actually wore'
+        'fact': 'St. Patrick wasn\'t actually Irish and green was not the colour he actually wore.'
     },
     {
         'question': 'Q2. Which year was Guiness established?',
@@ -64,19 +64,19 @@ const questions = [
         'question': 'Q7. Which year did The Den first appear on tv?',
         'answers': [1984, 1986, 1988, 1990],
         'correct': 1,
-        'fact': 'The show that introduced the nation to characters such as Zig and Zag, Podge and Rodge, and Dustin the Turkey.'
+        'fact': 'The show that introduced characters such as Zig and Zag, Podge and Rodge, and Dustin the Turkey.'
     },
     {
         'question': 'Q8. Which year did Jedward enter The X Factor?',
         'answers': [2008, 2009, 2010, 2011],
         'correct': 1,
-        'fact': 'Jedward were both 17 years old when they came 6th place on UK’s 2009 X-Factor.'
+        'fact': 'Jedward were both 17 years old when they came 6th place on UK\’s 2009 X-Factor.'
     },
     {
         'question': 'Q9. Which year was Roy Keane sent home from the World Cup in Saipan?',
         'answers': [1994, 1998, 2002, 2004],
         'correct': 2,
-        'fact': 'The Irish captain was sent home from the World Cup after a heated argument with coach Mick McCarthy over the team\'s preparation and facilities.'
+        'fact': 'The Irish captain was sent home after a heated argument with Mick McCarthy over the team\'s preparation and facilities.'
     },
     {
         'question': 'Q10. Which year did Ireland win their first Six Nations?',
@@ -132,7 +132,7 @@ function checkAnswer(answerNum) {
         buttons[answerNum].style.backgroundColor = '';
         buttons[correctAns].style.backgroundColor = '';
         fact.innerText = '';
-}, 1000);
+}, 5000);
 }
 }
 
@@ -149,6 +149,7 @@ function endgameOption (chosen) {
         window.location.reload()
     } else {
         quiz.innerHTML = "<h1>Thanks for playing, slán!</h1>"
+        
     }
 }
 
