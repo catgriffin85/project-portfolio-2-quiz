@@ -132,7 +132,7 @@ function checkAnswer(answerNum) {
         buttons[answerNum].style.backgroundColor = '';
         buttons[correctAns].style.backgroundColor = '';
         fact.innerText = '';
-}, 5000);
+}, 1000);
 }
 }
 
@@ -148,7 +148,7 @@ function endgameOption (chosen) {
     if (chosen === 0 ) {
         window.location.reload()
     } else {
-        quiz.innerHTML = "<h1>Thanks for playing!</h1>"
+        quiz.innerHTML = "<h1>Thanks for playing, slán!</h1>"
     }
 }
 

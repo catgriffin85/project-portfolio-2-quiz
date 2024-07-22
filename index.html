@@ -4,12 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-        rel="stylesheet">
+    <!-- Meta tags for SEO -->
+    <meta name="description"
+        content="10 question multi choice answer quiz focused on important dates in Irish pop culture">
+    <meta name="keywords"
+        content="quiz, Ireland, dates, guess the year, multiple choice, pop culture, fun, quick, questions">
 
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
@@ -38,14 +37,15 @@
                 thoroughly before making your choice.</p>
             <p><strong>Have Fun:</strong> This quiz is all about learning and having a blast, so enjoy the process and
                 don’t stress about the scores.</p>
-            <br>
-            <p>Click <strong>Start Quiz</strong> to begin. Good luck"</p>
+            <p>Click <strong>Start Quiz</strong> to begin.</p>
+            <p>Go n-éirí an t-ádh leat.</p>
 
             <button id="startQuiz">Start Quiz!</button>
         </div>
 
         <!-- Questions section -->
         <div id="quizSection" class="hidden">
+            <img src="assets/images/flag.png" alt="Picture of an Irish flag">
             <div id="question"></div>
             <br>
             <div id="answers">
@@ -64,7 +64,7 @@
         <!-- Option to play again or finish game -->
         <div id="playAgain">
             <p>Would you like to play again?</p>
-            <button onclick="endgameOption(0)">Yes</button>
+            <button onclick="endgameOption(0)">Yes please!</button>
             <button onclick="endgameOption(1)">No, I'm done</button>
         </div>
     </main>
