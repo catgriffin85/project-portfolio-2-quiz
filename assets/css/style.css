@@ -8,11 +8,11 @@ body {
     font-family: "Raleway", sans-serif;
     font-size: 120%;
     text-align: center;
-    margin: 0;
+    margin: 0.5;
     padding: 0;
 }
 
-/*Introduction styling*/
+/*Start Quiz button in introduction section*/
 #startQuiz {
     background-color: green;
     color: gold;
@@ -52,6 +52,13 @@ img {
     border-radius: 25px;   
 }
 
+/*Score count section */
+#scoreCount {
+    font-size: 160%;
+    font-weight: 600;
+}
+
+
 /*Play again section*/
 #playAgain {
     font-size: 140%;
@@ -61,11 +68,11 @@ img {
 
 /*Play again button styling*/
 #playAgain button {
-    background-color: #BADBC6;
-    color: #0C1231;
+    background-color: white;
+    color: green;
     padding: 0.75rem;
     font-size: 100%;
-    border: 1px solid #0C1231;
+    border: 1px solid green;
     border-radius: 25px;
 }
 
@@ -78,8 +85,7 @@ img {
     padding-top: 10%;
     font-size: 120%;
     font-weight: 400;
-    
-    
+   
 }
 
 /*Answer button styling*/
@@ -95,4 +101,17 @@ img {
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
+/*Play again button styling*/
+#playAgain button {
+    margin: 0.5rem;
+    background-color: white;
+    color: green;
+    padding: 0.75rem;
+    font-size: 100%;
+    border: 1px solid green;
+    border-radius: 25px;
+   
+}
+
 }
