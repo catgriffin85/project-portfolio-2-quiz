@@ -97,7 +97,7 @@ img {
         background-color: #E0FEED;
         border: 2px solid;
         border-radius: 15px;
-        display: flexbox;
+        display: inline-flex;
         align-items: center;
         flex-wrap: wrap;
         justify-content: space-between;
