@@ -6,13 +6,16 @@ const answer2 = document.getElementById('answer2');
 const answer3 = document.getElementById('answer3');
 const answer4 = document.getElementById('answer4');
 const score = document.getElementById('score');
+const fact = document.getElementById('fact');
+const playAgain = document.getElementById('playAgain');
+const answers = document.getElementById('answers');
+const quiz = document.getElementById('quiz');
 
 let questionNum = 0;
 let scoreNum = 0;
 
-//* Display introduction section only first then click Start Quiz and introduction section is hidden and question section displays
-
-document.getElementById('startQuiz').addEventListener('click', function() {
+// Display introduction section only first then click Start Quiz and introduction section is hidden and question section displays
+document.getElementById('startQuiz').addEventListener('click', function () {
     const introSection = document.getElementById('introduction');
     const questionSection = document.getElementById('quizSection');
 
@@ -21,10 +24,8 @@ document.getElementById('startQuiz').addEventListener('click', function() {
 
 });
 
-//* List of questions
-
-const questions = [
-    {
+// List of questions
+const questions = [{
         'question': 'Q1. Which year was St. Patricks day was first celebrated?',
         'answers': [1631, 1641, 1651, 1661],
         'correct': 0,
@@ -60,7 +61,7 @@ const questions = [
         'correct': 3,
         'fact': 'Glenroe ran for 18 seasons before concluding in 2001.'
     },
-        {
+    {
         'question': 'Q7. Which year did The Den first appear on tv?',
         'answers': [1984, 1986, 1988, 1990],
         'correct': 1,
@@ -88,13 +89,19 @@ const questions = [
 
 const quizLength = questions.length;
 
-//* Load questions and answers
-
+/**
+ * Load questions
+ * @param {*} questionNum 
+ */ 
 function loadQuestion(questionNum) {
     question.innerText = questions[questionNum].question;
-    
+
 }
 
+/**
+ * Load answers
+ * @param {*} questionNum 
+ */
 function loadAnswers(questionNum) {
     answer1.innerText = questions[questionNum].answers[0];
     answer2.innerText = questions[questionNum].answers[1];
@@ -104,7 +111,10 @@ function loadAnswers(questionNum) {
 }
 
 
-//* Check the answer and style the buttons based on if the answer is correct or not 
+/** 
+ * Check the answer and style the buttons based on if the answer is correct or not 
+ * @param {*} answerNum
+ */
 function checkAnswer(answerNum) {
     console.log('answer number chosen:', answerNum);
     const buttons = document.querySelectorAll('#answers button');
@@ -120,23 +130,27 @@ function checkAnswer(answerNum) {
         buttons[correctAns].style.backgroundColor = 'green';
         fact.innerText = questions[questionNum].fact;
     }
-  
-//* Check if next question needs to be reloaded or the game should end
+
+    // Check if next question needs to be reloaded or the game should end
     questionNum++;
     if (questionNum === quizLength) {
         endgame();
     } else {
         setTimeout(() => {
-        loadQuestion(questionNum);
-        loadAnswers(questionNum);
-        buttons[answerNum].style.backgroundColor = '';
-        buttons[correctAns].style.backgroundColor = '';
-        fact.innerText = '';
-}, 5000);
-}
+            loadQuestion(questionNum);
+            loadAnswers(questionNum);
+            buttons[answerNum].style.backgroundColor = '';
+            buttons[correctAns].style.backgroundColor = '';
+            fact.innerText = '';
+        }, 5000);
+    }
 }
 
-//* End quiz
+/**
+ * End quiz
+ * @param {*} endgame
+ */
+
 function endgame() {
     playAgain.style.visibility = "visible";
     question.innerText = '';
@@ -144,16 +158,19 @@ function endgame() {
     fact.innerText = '';
 }
 
-function endgameOption (chosen) {
-    if (chosen === 0 ) {
+function endgameOption(chosen) {
+    if (chosen === 0) {
         window.location.reload()
     } else {
         quiz.innerHTML = "<h1>Thanks for playing, slán!</h1>"
-        
+
     }
 }
 
-//* Start quiz again
+/**
+ * Start quiz again
+ * @param {*} startQuiz
+ */
 function startQuiz() {
     playAgain.style.visibility = "hidden";
     loadQuestion(questionNum);
