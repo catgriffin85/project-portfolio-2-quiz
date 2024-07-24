@@ -183,9 +183,9 @@ function endgame() {
 
 function endgameOption(chosen) {
     if (chosen === 0) {
-        window.location.reload()
+        window.location.reload();
     } else {
-        quiz.innerHTML = "<h1>Thanks for playing, slán!</h1>"
+        quiz.innerHTML = "<h1>Thanks for playing, slán!</h1>";
 
     }
 }
@@ -197,7 +197,7 @@ function endgameOption(chosen) {
 function startQuiz() {
     playAgain.style.visibility = "hidden";
     loadQuestion(questionNum);
-    loadAnswers(questionNum)
+    loadAnswers(questionNum);
 }
 
 startQuiz();
