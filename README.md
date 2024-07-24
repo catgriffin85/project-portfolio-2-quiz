@@ -1,6 +1,8 @@
 # Guess The Year Quiz
 
-[Guess The Year] (https://catgriffin85.github.io/project-portfolio-2-quiz/) is a quiz designed to test your knowledge of key dates and milestones that have shaped Irish pop culture over the years. The quiz is comprised of 10 questions, each question has four possible answers. Once you have selected your answer you will be provided with a fun fact related to the question.
+Guess The Year is a quiz designed to test your knowledge of key dates and milestones that have shaped Irish pop culture over the years. The quiz is comprised of 10 questions, each question has four possible answers. Once you have selected your answer you will be provided with a fun fact related to the question.
+
+You can play the quiz here: [Guess The Year](https://catgriffin85.github.io/project-portfolio-2-quiz/)
 
 ![Responsive Mockup](/assets/images/readme/responsive-image.png)
 
@@ -24,8 +26,42 @@ Incorrect answer selected:
 
 ![Incorrect answer selected](/assets/images/readme/incorrect-answer.png)
 
-Video stepping through each question:
-
-[![Question Video](/assets/images/ireland-map.png)](/assets/images/readme/recording-of-questions.mp4)
 
 ### Play Again Page
+
+Once the user has answered all 10 questions their score will be displayed and they will be asked if they would like to play again and presented with two options: Yes, please! and No, I'm done.
+
+![Play Again page](/assets/images/readme/play-again-screen.png)
+
+If the user selects Yes, please! they will be brought back to the introduction page where they can start the quiz again. 
+If the user selects No, I'm done they will be shown a new screen that thanks them from playing.
+
+![Thanks for playing screen](/assets/images/readme/screenshot-endgame.png)
+
+## Testing
+
+* HTML
+    No errors were returned when passing through the official [W3C HTML Validator](https://validator.w3.org/)
+
+    ![W3C HTML Validator results](/assets/images/readme/w3c-html-results.png)
+
+* CSS
+    No errors were returned when passing through the official [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+
+    ![W3C CSS Validator results](/assets/images/readme/w3c-css-results.png)
+
+* JavaScript
+    Only one unused variable was found when passing through the office [JSHint Validator](https://jshint.com/)
+    This variable is linked to the HTML page.
+
+    ![JSHint Validator results](/assets/images/readme/jshint-results.png)
+
+    Metrics:
+
+    ![JSHint Validator metrics](/assets/images/readme/jshint-metrics.png)
+
+* Lighthouse
+
+    ![Lighthouse results](/assets/images/readme/lighthouse-results.png)
+
+## Bugs
