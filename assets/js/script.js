@@ -107,18 +107,40 @@ function loadAnswers(questionNum) {
     answer2.innerText = questions[questionNum].answers[1];
     answer3.innerText = questions[questionNum].answers[2];
     answer4.innerText = questions[questionNum].answers[3];
-
+    setAnswerButtons(true);
 }
 
+/**
+ * This function sets the answer buttons on or off
+ * @param (*) isLive
+ */
+function setAnswerButtons(isLive) {
+    if (isLive) {
+        answer1.addEventListener('click', answer1Listener);
+        answer2.addEventListener('click', answer2Listener);
+        answer3.addEventListener('click', answer3Listener);
+        answer4.addEventListener('click', answer4Listener);
+    } else {
+        answer1.removeEventListener('click', answer1Listener);
+        answer2.removeEventListener('click', answer2Listener);
+        answer3.removeEventListener('click', answer3Listener);
+        answer4.removeEventListener('click', answer4Listener);
+    }
+}
+
+const answer1Listener = () => checkAnswer(0);
+const answer2Listener = () => checkAnswer(1);
+const answer3Listener = () => checkAnswer(2);
+const answer4Listener = () => checkAnswer(3);
 
 /** 
  * Check the answer and style the buttons based on if the answer is correct or not 
  * @param {*} answerNum
  */
 function checkAnswer(answerNum) {
-    console.log('answer number chosen:', answerNum);
     const buttons = document.querySelectorAll('#answers button');
     let correctAns = questions[questionNum].correct;
+    setAnswerButtons(false);
 
     if (answerNum === correctAns) {
         buttons[answerNum].style.backgroundColor = 'green';
