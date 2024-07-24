@@ -155,18 +155,19 @@ function checkAnswer(answerNum) {
 
     // Check if next question needs to be reloaded or the game should end
     questionNum++;
+
+    setTimeout(() => {
     if (questionNum === quizLength) {
         endgame();
     } else {
-        setTimeout(() => {
-            loadQuestion(questionNum);
-            loadAnswers(questionNum);
-            buttons[answerNum].style.backgroundColor = '';
-            buttons[correctAns].style.backgroundColor = '';
-            fact.innerText = '';
-        }, 5000);
+        loadQuestion(questionNum);
+        loadAnswers(questionNum);
+        buttons[answerNum].style.backgroundColor = '';
+        buttons[correctAns].style.backgroundColor = '';
+        fact.innerText = '';
     }
-}
+        }, 6000);
+    }
 
 /**
  * End quiz
