@@ -68,7 +68,7 @@ If the user selects No, I'm done they will be shown a new screen that thanks the
 
     While creating my quiz I encountered two main issues:
 
-    1. During testing of my quiz I identified that even if an answer was selected it did not stop the user selecting other answers. This resulted in the buttons changing incorrect colours and interupted the flow of the quiz. With assistance from my mentor, it was identified that the buttons needed to be switched off after an answer was selected and not switched on again until a new question was loaded. I updated my code to includee addEventListener and a removeEventListener. This resolved the issue.
+    1. During testing of my quiz I identified that when an answer was selected it did not stop the user selecting other answers. This resulted in the buttons changing incorrect colours and interupted the flow of the quiz. With assistance from my mentor, it was identified that the buttons needed to be switched off after an answer was selected and not switched on again until a new question was loaded. I updated my code to include an addEventListener and a removeEventListener. This resolved the issue.
 
     2. On the last question once an answer was selected the quiz jumped straight to the Play Again screen. It did not show if the answer selected was correct and did not show the fact. During a review with my mentor, I could see that this was due to the end game check running before the timer. To fix this issue I rearranged my code so the timer runs before the check to end the game. 
 
@@ -79,8 +79,8 @@ No unfixed bugs.
 * Git Commit
 
     * This project was created in Gitpod and pushed to GitHub to the respository: https://catgriffin85.github.io/project-portfolio-2-quiz/
-    * git add . and git commit were used throughout the project to push the code to my repository
-    * I used descriptive and meaningful messages when using git commit and commited often
+    * git add . and git commit were used throughout the project to push the code to my repository.
+    * I used descriptive and meaningful messages when using git commit and commited often.
 
 * Deployment to GitHub
 
@@ -88,7 +88,7 @@ No unfixed bugs.
 
         * In the GitHub repository, navigate to the Settings tab.
         * From the source section drop-down, select the Master Branch.
-        * Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon disply to indicate the successful deployment.
+        * Once the Master Branch has been selected, the page will be automatically refreshed with a detailed ribbon disply to indicate the successful deployment.
 
 ## Credits
 
