@@ -16,7 +16,7 @@ The introdution page provides a brief intro about the quiz and shows a map of Ir
 
 ### Question Page
 
-The quiz is made up of 10 questions. Each question offers four possible answer for the user to choose from. If the correct answer is selected the button will turn green. However, if the incorrect answer is selected the button will turn red and the correct answer will turn green. Once an answer, right or wrong, is selected a fun fact relating to the question will be displayed. The score is tracked below the fact and shows correct answers out of ten. A timer has been set so that after six seconds the next question is displayed. Once an answer has been clicked the buttons become unresponsive until the next question is displayed.
+The quiz is made up of 10 questions. Each question offers four possible answers for the user to choose from. If the correct answer is selected the button will turn green. However, if the incorrect answer is selected the button will turn red and the correct answer will turn green. Once an answer, right or wrong, is selected a fun fact relating to the question will be displayed. The score is tracked below the fact and shows correct answers out of ten. A timer has been set so that after six seconds the next question is displayed. Once an answer has been clicked the buttons become unresponsive until the next question is displayed.
 
 Correct answer selected:
 
@@ -29,7 +29,7 @@ Incorrect answer selected:
 
 ### Play Again Page
 
-Once the user has answered all 10 questions their score will be displayed and they will be asked if they would like to play again and presented with two options: Yes, please! and No, I'm done.
+Once the user has answered all 10 questions their score will be displayed. They will be asked if they would like to play again and presented with two options: Yes, please! and No, I'm done.
 
 ![Play Again page](/assets/images/readme/play-again-screen.png)
 
@@ -64,4 +64,10 @@ If the user selects No, I'm done they will be shown a new screen that thanks the
 
     ![Lighthouse results](/assets/images/readme/lighthouse-results.png)
 
-## Bugs
+* Bugs
+
+    While creating my quiz I encountered two main issues:
+
+    1. During testing of my quiz I identified that even if an answer was selected it did not stop the user selecting other answers. This resulted in the buttons changing incorrect colours and interupted the flow of the quiz. With assistance from my mentor, it was identified that the buttons needed to be switched off after an answer was selected and not switched on again until a new question was loaded. I updated my code to includee addEventListener and a removeEventListener. This resolved the issue.
+
+    2. On the last question once an answer was selected the quiz jumped straight to the Play Again screen. It did not show if the answer selected was correct and did not show the fact. During a review with my mentor, I could see that this was due to the end game check running before the timer. To fix this issue I rearranged my code so the timer runs before the check to end the game. 
