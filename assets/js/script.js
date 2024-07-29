@@ -153,9 +153,9 @@ function checkAnswer(answerNum) {
     fact.innerText = questions[questionNum].fact;
 }
 
-// Check if next question needs to be reloaded or the game should end
 questionNum++;
 
+// Timer before moving to the next question or ending game
 setTimeout(() => {
   if (questionNum === quizLength) {
     endgame();
@@ -170,17 +170,19 @@ setTimeout(() => {
 }
 
 /**
- * End quiz
+ * End quiz page
  * @param {*} endgame
  */
-
 function endgame() {
   playAgain.style.visibility = "visible";
   question.innerText = '';
   answers.innerText = '';
   fact.innerText = '';
 }
-
+/**
+ * End quiz option
+ * @param {*} chosen 
+ */
 function endgameOption(chosen) {
   if (chosen === 0) {
     window.location.reload();
